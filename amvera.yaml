@@ -1,0 +1,11 @@
+meta:
+  environment: python
+  toolchain:
+    - 3.11
+build:
+  commands:
+    - pip install -r requirements.txt
+run:
+  command: python bot_working_fixed.py
+  env:
+    - PYTHONUNBUFFERED=1
