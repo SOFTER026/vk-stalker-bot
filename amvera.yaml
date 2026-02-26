@@ -1,11 +1,13 @@
 meta:
   environment: python
   toolchain:
-    - 3.11
+    name: pip
+    version: 3.11
 build:
-  commands:
-    - pip install -r requirements.txt
+  requirementsPath: requirements.txt
 run:
-  command: python bot_working_fixed.py
+  scriptName: bot_working_fixed.py
+  persistenceMount: /data
+  containerPort: 8080
   env:
-    - PYTHONUNBUFFERED=1
+    PYTHONUNBUFFERED: "1"
